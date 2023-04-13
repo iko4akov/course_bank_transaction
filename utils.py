@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 
 
-def create_data(filename):
+def create_data(filename: str) -> dict:
     with open(filename, encoding='utf-8') as f:
         data = json.load(f)
 
