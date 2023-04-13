@@ -27,7 +27,7 @@ def hide_number_card(info_card: str) -> str:
             service_card += index + " "
 
         elif index.isdigit() and len(index) == 16:
-            num_card = index.replace(index[5:12], f" {index[4:6]}** **** ")
+            num_card = index.replace(index[4:12], f" {index[4:6]}** **** ")
 
         elif index.isdigit() and len(index) == 20:
             num_card = '**' + index[-4:]
