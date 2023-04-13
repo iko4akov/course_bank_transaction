@@ -25,6 +25,7 @@ def test_create_data_invalid():
 
     try:
         create_data(filename)
+
         assert False, 'Expected an exception to be raised'
 
     except json.JSONDecodeError:
@@ -42,8 +43,6 @@ def test_create_data_non():
 
     except FileNotFoundError:
         pass
-
-    print('All test cases passed')
 
 test_create_data_valid()
 test_create_data_invalid()
