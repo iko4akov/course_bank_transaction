@@ -43,7 +43,3 @@ def test_create_data_non():
 
     except FileNotFoundError:
         pass
-
-test_create_data_valid()
-test_create_data_invalid()
-test_create_data_non()
