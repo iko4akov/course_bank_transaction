@@ -30,8 +30,3 @@ def test_format_date_empty():
 
     except ValueError:
         pass
-
-
-test_format_date_valid()
-test_format_date_invalid()
-test_format_date_empty()
