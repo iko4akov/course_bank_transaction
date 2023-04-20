@@ -6,7 +6,6 @@ from config.config import config_obj
 from src.main import last_operations
 
 
-
 def test_get_file_not_found():
     """Test case 1: File not found error"""
     with pytest.raises(FileNotFoundError):

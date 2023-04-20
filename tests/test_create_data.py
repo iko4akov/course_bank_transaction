@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from src.utils import create_data
 from config.config import config_obj
 
@@ -21,25 +23,13 @@ def test_create_data_valid():
 def test_create_data_invalid():
     """Test Invalid JSON file"""
 
-
-    with open(config_obj.test_write_file, 'w') as f:
-        f.write('invalid json')
-
-    try:
+    with pytest.raises(json.JSONDecodeError):
         create_data(config_obj.test_write_file)
 
-        assert False, 'Expected an exception to be raised'
-
-    except json.JSONDecodeError:
-        pass
 
 def test_create_data_non():
     """Test Non-existent file"""
 
-    try:
+    with pytest.raises(FileNotFoundError):
         create_data('non_existent.json')
 
-        assert False, 'Expected an exception to be raised'
-
-    except FileNotFoundError:
-        pass
