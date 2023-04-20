@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+tests/invalid_data.json
+tests/test_data.json
+
+.coverage
+
 venv
 
 .pytest_cache

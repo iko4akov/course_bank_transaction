@@ -1,9 +1,9 @@
-from utils import create_data
-from config import config_obj
-from utils import format_date, hide_number_card
+from src.utils import create_data
+from config.config import config_obj
+from src.utils import format_date, hide_number_card
 
 
-def last_operations(file_json):
+def last_operations(file_json: str):
     operations = sorted(create_data(file_json), key=lambda x: x['date'], reverse=True)[0:5]
 
     for operation in operations:
