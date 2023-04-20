@@ -3,6 +3,11 @@
 ---
 
 ## Start code
+### Warning
+
+в случае, распаковки архива локально, следует учитывать, что в файле **[operations.json](operations.json)** на `1104` строке
+находится пустой словарь `{}`, который необходимо удалить в ручную для корректной работы программы_
+
 
 `run main.py`
 
@@ -13,7 +18,7 @@
 ---
 ## Code Description
 The code reads the data from the operations.json file 
-(using [unzip_file.py](unzip_file.py) unpacks from the
+(using [unzip_file.py](unzip_file/unzip_file.py) unpacks from the
 [operations.zip](operations.zip) archive)*, sorts them by date of
 operations and displays information about the last five operations.
 
@@ -49,11 +54,8 @@ Also in the folder [tests](tests) there are tests:
 
 
 ### Описание кода (Русская версия)
-Код считывает данные из файла **[operations.json](operations.json)** (с помощью [unzip_file.py](unzip_file.py) распаковывается из архива [operations.zip](operations.zip))*, сортирует их по дате операций и выводит сведения о последних 
+Код считывает данные из файла **[operations.json](operations.json)** (с помощью [unzip_file.py](unzip_file/unzip_file.py) распаковывается из архива [operations.zip](operations.zip))*, сортирует их по дате операций и выводит сведения о последних 
 пяти операциях.
-
-*_в случаея распаковки архива локально, следует учитывать, что в файле **[operations.json](operations.json)** на `1104` строке
-находится пустой словарь `{}`, который необходимо удалить в ручную для корректной работы программы_
 
 Функция `create_data` в `utils.py` читает файл **JSON** и возвращает список словарей, 
 содержащих информацию о каждой операции.
