@@ -1,3 +1,5 @@
+import pytest
+
 from src.utils import hide_number_card
 
 def test_hide_number_card_valid():
@@ -30,10 +32,5 @@ def test_hide_number_card_invalid():
 
 def test_hide_number_card_error():
     """Test case return error """
-    info_6 = 123
-    try:
-        hide_number_card(info_6) == ''
-        assert False,  'Expected an exception to be raised'
-
-    except AttributeError:
-        pass
+    with pytest.raises(AttributeError):
+        hide_number_card(123) == ''
