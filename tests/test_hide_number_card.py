@@ -1,4 +1,4 @@
-from utils import hide_number_card
+from src.utils import hide_number_card
 
 def test_hide_number_card_valid():
     """Test case Valid number"""

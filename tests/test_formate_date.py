@@ -1,4 +1,4 @@
-from utils import format_date
+from src.utils import format_date
 
 
 def test_format_date_valid():

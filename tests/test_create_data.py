@@ -1,6 +1,6 @@
 import json
 
-from utils import create_data
+from src.utils import create_data
 
 
 def test_create_data_valid():
