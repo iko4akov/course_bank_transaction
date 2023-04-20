@@ -1,3 +1,5 @@
+import pytest
+
 from src.utils import format_date
 
 
@@ -11,22 +13,12 @@ def test_format_date_valid():
 def test_format_date_invalid():
     """Test case 2: Invalid date string"""
 
-    date_string = '2022-53-15T12:30:45.123456'
+    with pytest.raises(ValueError):
+        format_date('2022-53-15T12:30:45.123456')
 
-    try:
-        format_date(date_string)
-        assert False, 'Expected an exception to be raised'
-
-    except ValueError:
-        pass
 
 def test_format_date_empty():
     """Test case 3: Empty string"""
 
-    date_string = ''
-    try:
-        format_date(date_string)
-        assert False, 'Expected an exception to be raised'
-
-    except ValueError:
-        pass
+with pytest.raises(ValueError):
+    format_date('')
