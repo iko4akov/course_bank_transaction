@@ -15,6 +15,10 @@
 ## Start tests
 `python -m pytest`
 
+## Coverage tests
+
+`pytest --cov .\src\ --cov-report term-missing`
+
 ---
 ## Code Description
 The code reads the data from the operations.json file 
