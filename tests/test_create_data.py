@@ -22,7 +22,6 @@ def test_create_data_valid():
 
 def test_create_data_invalid():
     """Test Invalid JSON file"""
-
     with pytest.raises(json.JSONDecodeError):
         create_data(config_obj.test_write_file)
 

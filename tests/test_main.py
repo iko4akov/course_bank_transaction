@@ -17,7 +17,13 @@ def test_file_type_error():
     with pytest.raises(json.JSONDecodeError):
         last_operations(True)
 
-
 def test_none_key():
-    with pytest.raises(AttributeError):
-        last_operations(config_obj.test_file)
+    with pytest.raises(KeyError):
+        last_operations(config_obj.test_file_invalid)
+
+
+def test_last_operations():
+
+    assert last_operations(config_obj.test_data_json) == print('26.08.2019 Перевод организации\n' \
+                                                         'Maestro 1596 83** **** 5199 -> Счет **9589\n' \
+                                                         '31957.58 руб.')
